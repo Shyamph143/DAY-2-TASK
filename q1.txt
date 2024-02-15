@@ -1,0 +1,77 @@
+1. Write a blog on the Difference Between document and window objects?
+
+Ans: Understanding the Difference Between Document and Window Objects in JavaScript
+When working with JavaScript in the context of web development, two essential objects play a crucial role: the document object and the window object. These objects are fundamental to manipulating and interacting with the content of a web page. Let's explore the differences between the document and window objects and understand their respective roles.
+
+1. The window Object
+
+Overview:
+
+The window object represents the global window of the browser and serves as the top-level container for all other objects. 
+When you open a new browser window or tab, it is the window object that encapsulates everything within that browsing context.
+
+Key Characteristics:
+
+	Global Scope: Variables and functions declared globally become properties and methods of the window object.
+
+	Browser Properties: Contains information about the browser environment, such as the browser's dimensions, location, and navigation history.
+
+	Timers and Intervals: Handles timers and intervals through methods like setTimeout and setInterval.
+
+	Browser Interaction: Provides methods for opening new windows or tabs (open), navigating to URLs (location), and more.
+
+
+Example:
+
+console.log(window.innerWidth);  // Get the inner width of the browser window
+window.alert('Hello, World!');  // Display an alert dialog
+
+2. The document Object
+
+Overview:
+The document object represents the HTML document loaded in the browser window. It provides an interface to interact with the content and structure of the document, allowing developers to manipulate and query elements.
+
+Key Characteristics:
+
+	DOM Manipulation: Enables manipulation of HTML elements, such as changing content, styles, and attributes.
+
+	Element Selection: Provides methods like getElementById, getElementsByClassName, and querySelector to select and access elements in the document.
+
+	Event Handling: Allows attaching event listeners to elements for handling user interactions.
+
+	Document Structure: Represents the structure of the HTML document, including elements like head, body, and more.
+
+
+
+
+Example:
+
+const myElement = document.getElementById('example');  // Select an element by its ID
+myElement.innerHTML = 'New Content';  // Change the content of the selected element
+document.addEventListener('click', function() {
+    console.log('Document clicked!');
+});
+
+Key Differences:
+
+1.	Scope:
+
+	The window object is global and encompasses the entire browser window.
+
+	The document object is specific to the loaded HTML document and represents its structure and content.
+
+2.	Purpose:
+
+	The window object manages the browser window and provides access to browser-related properties and methods.
+
+	The document object facilitates interaction with the HTML document, allowing manipulation and querying of its elements.
+
+3.	Hierarchy:
+
+	The window object is at the top of the hierarchy, encompassing everything in the browser.
+
+	The document object is a property of the window object, representing the currently loaded HTML document.
+
+
+
+Understanding the distinctions between the document and window objects is crucial for effective web development. While the window object manages the broader browser environment, the document object focuses on the specific HTML content within the window, providing methods and properties for dynamic interaction and modification.
